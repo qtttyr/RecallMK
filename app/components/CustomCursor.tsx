@@ -20,7 +20,9 @@ export function CustomCursor() {
     const onMove = (e: MouseEvent) => {
       tx = e.clientX;
       ty = e.clientY;
+      dot.classList.add("is-visible");
     };
+    const onLeave = () => dot.classList.remove("is-visible");
     const onDown = () => dot.classList.add("is-click");
     const onUp = () => dot.classList.remove("is-click");
 
@@ -43,6 +45,7 @@ export function CustomCursor() {
     };
 
     window.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseleave", onLeave);
     window.addEventListener("mousedown", onDown);
     window.addEventListener("mouseup", onUp);
     document.addEventListener("mouseover", onOver);
@@ -51,6 +54,7 @@ export function CustomCursor() {
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseleave", onLeave);
       window.removeEventListener("mousedown", onDown);
       window.removeEventListener("mouseup", onUp);
       document.removeEventListener("mouseover", onOver);

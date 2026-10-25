@@ -51,7 +51,12 @@
     text-rendering: optimizeLegibility;
     line-height: 1.32;
     overflow-x: hidden;
-    cursor: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    html, body, a, button {
+      cursor: none;
+    }
   }
 
   /* Custom scrollbar */
@@ -75,9 +80,7 @@
     color: var(--bg);
   }
 
-  a, button {
-    cursor: none;
-  }
+
 
   h1, h2, h3 {
     font-weight: 700;
@@ -107,8 +110,12 @@
   z-index: 9999;
   mix-blend-mode: difference;
   transform: translate(-50%, -50%);
+  opacity: 0;
   transition: width 0.25s var(--ease-out), height 0.25s var(--ease-out), opacity 0.2s;
   will-change: transform;
+}
+.cursor-dot.is-visible {
+  opacity: 1;
 }
 .cursor-dot.is-hover {
   width: 48px;
