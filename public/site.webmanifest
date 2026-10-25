@@ -1,0 +1,12 @@
+{
+  "name": "Recall",
+  "short_name": "Recall",
+  "description": "Local-first neural clipboard memory for macOS.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e7e7e5",
+  "theme_color": "#e7e7e5",
+  "icons": [
+    { "src": "/icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

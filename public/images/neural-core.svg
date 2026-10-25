@@ -1,0 +1,54 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="dieGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#1e293b" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#08090b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="metalRim" x1="0" y1="0" x2="600" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.12"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="600" fill="#08090b" />
+  <circle cx="300" cy="300" r="280" fill="url(#dieGlow)" />
+
+  <!-- Processor Die Substrate -->
+  <rect x="100" y="100" width="400" height="400" rx="28" fill="#0f1117" stroke="url(#metalRim)" stroke-width="1.5" />
+  <rect x="110" y="110" width="380" height="380" rx="20" fill="#090a0d" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+
+  <!-- Micro Circuitry Traces -->
+  <g stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-linecap="round">
+    <line x1="140" y1="180" x2="220" y2="180" />
+    <line x1="220" y1="180" x2="240" y2="200" />
+    <line x1="240" y1="200" x2="260" y2="200" />
+
+    <line x1="140" y1="220" x2="200" y2="220" />
+    <line x1="200" y1="220" x2="230" y2="250" />
+    <line x1="230" y1="250" x2="260" y2="250" />
+
+    <line x1="140" y1="380" x2="200" y2="380" />
+    <line x1="200" y1="380" x2="230" y2="350" />
+    <line x1="230" y1="350" x2="260" y2="350" />
+
+    <line x1="460" y1="180" x2="380" y2="180" />
+    <line x1="380" y1="180" x2="360" y2="200" />
+    <line x1="360" y1="200" x2="340" y2="200" />
+
+    <line x1="460" y1="380" x2="380" y2="380" />
+    <line x1="380" y1="380" x2="360" y2="350" />
+    <line x1="360" y1="350" x2="340" y2="350" />
+  </g>
+
+  <!-- Central Neural Engine Silicon Core -->
+  <rect x="230" y="230" width="140" height="140" rx="14" fill="#141720" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" />
+  <circle cx="300" cy="300" r="45" fill="rgba(59, 130, 246, 0.08)" stroke="rgba(96, 165, 250, 0.6)" stroke-width="1" />
+  <circle cx="300" cy="300" r="18" fill="#ffffff" filter="drop-shadow(0 0 16px rgba(255,255,255,0.8))" />
+
+  <!-- Technical Markings -->
+  <text x="140" y="145" fill="rgba(255,255,255,0.35)" font-family="monospace" font-size="11" letter-spacing="2">APPLE NEURAL ENGINE // FP16</text>
+  <text x="140" y="455" fill="rgba(255,255,255,0.25)" font-family="monospace" font-size="10" letter-spacing="1.5">768-D EMBEDDING GEMMA 2</text>
+  <text x="360" y="455" fill="rgba(96,165,250,0.6)" font-family="monospace" font-size="10" letter-spacing="1">LATENCY &lt; 4MS</text>
+</svg>
