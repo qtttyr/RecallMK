@@ -61,10 +61,7 @@ export const metadata: Metadata = {
     languages: { "en-US": "/", "ru-RU": "/" },
   },
   icons: {
-    icon: [
-      { url: "/icon.png", sizes: "512x512", type: "image/png" },
-      { url: "/favicon.ico", sizes: "48x48" },
-    ],
+    icon: [{ url: "/icon.png", sizes: "512x512", type: "image/png" }],
     apple: [{ url: "/icon.png", sizes: "512x512" }],
     shortcut: "/icon.png",
   },
@@ -124,36 +121,44 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                "@context": "https://schema.org",
-                "@type": "SoftwareApplication",
-                name: "Recall",
-                operatingSystem: "macOS 15+",
-                applicationCategory: "UtilitiesApplication",
-                description:
-                  "Local-first neural clipboard memory for macOS. Press ⌥Space, describe what you remember, and Recall finds it — even across languages.",
-                url: "https://recall.app",
-                author: { "@type": "Person", name: "Miras Kustaibek", url: "https://github.com/qtttyr" },
-                creator: { "@type": "Person", name: "Miras Kustaibek" },
-                offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                name: "Recall",
-                url: "https://recall.app",
-                author: { "@type": "Person", name: "Miras Kustaibek" },
-                inLanguage: ["en", "ru"],
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "Person",
-                name: "Miras Kustaibek",
-                url: "https://github.com/qtttyr",
-                sameAs: ["https://github.com/qtttyr/Recall", "mailto:mirasbusy@gmail.com"],
-              },
-            ]),
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "Recall",
+              operatingSystem: "macOS 15+",
+              applicationCategory: "UtilitiesApplication",
+              description:
+                "Local-first neural clipboard memory for macOS. Press ⌥Space, describe what you remember, and Recall finds it — even across languages.",
+              url: "https://recall.app",
+              author: { "@type": "Person", name: "Miras Kustaibek", url: "https://github.com/qtttyr" },
+              creator: { "@type": "Person", name: "Miras Kustaibek" },
+              offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Recall",
+              url: "https://recall.app",
+              author: { "@type": "Person", name: "Miras Kustaibek" },
+              inLanguage: ["en", "ru"],
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Miras Kustaibek",
+              url: "https://github.com/qtttyr",
+              sameAs: ["https://github.com/qtttyr/Recall", "mailto:mirasbusy@gmail.com"],
+            }).replace(/</g, "\\u003c"),
           }}
         />
         {children}
